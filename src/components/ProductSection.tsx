@@ -1,0 +1,4 @@
+import { MessageCircle } from 'lucide-react';
+import { products } from '../constants/site';
+import { getWhatsAppUrl } from '../utils/whatsapp';
+export function ProductSection() { return <section className="section products"><div className="section-head"><div><span className="eyebrow">OUR PICKS</span><h2>Popular right now</h2></div><button className="text-link">View all toys →</button></div><div className="product-grid">{products.map(([icon,name,price])=><article className="product" key={name}><div className="product-image">{icon}<span className="badge">Popular</span></div><div className="product-info"><h3>{name}</h3><div><b>{price}</b><a href={getWhatsAppUrl(`Hello Toy Willa! I want to enquire about ${name}.`)} target="_blank" rel="noreferrer"><MessageCircle size={16}/> Enquire</a></div></div></article>)}</div></section>; }
