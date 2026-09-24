@@ -1,4 +1,4 @@
-export const WHATSAPP_NUMBER = '917400009218';
+export const WHATSAPP_NUMBER = (import.meta.env.VITE_WHATSAPP_NUMBER || '917400009218').replace(/\D/g, '');
 
 export const navigationItems = ['Home', 'About Us', 'Categories', 'Contact'] as const;
 
